@@ -11,7 +11,7 @@ import os
 
 CSV_PATH = "data/matches_2026-27.csv"
 
-FIELDNAMES = ["home_club", "away_club", "home_score", "away_score", "scorers", "minutes"]
+FIELDNAMES = ["game_id", "home_club", "away_club", "home_score", "away_score", "scorers", "minutes"]
 
 def save_match_data(match_data: dict) -> None:
     """"
