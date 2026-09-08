@@ -19,7 +19,7 @@ def save_match_data(match_data: dict) -> None:
     ファイルが存在しない場合は、見出し行も一緒に書き込む。
     """
 
-    file_exists = os.path.exists(CSV_PATH)
+    file_exists = os.path.exists(CSV_PATH) and os.path.getsize(CSV_PATH) > 0
 
     with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
